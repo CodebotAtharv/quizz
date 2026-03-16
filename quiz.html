@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personality Assessment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./quiz.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <p class="logo">Logo.</p>
+      <button class="login-btn" type="button">Log In</button>
+    </header>
+
+    <main class="page-wrap">
+      <section id="quizPage">
+        <section class="assessment-card">
+          <div>
+            <h1>Personality Assesment</h1>
+            <p>Page 1 of 1</p>
+          </div>
+          <div class="badge" aria-hidden="true">10</div>
+        </section>
+
+        <section id="questionsContainer" aria-label="Assessment questions"></section>
+
+        <nav class="pager">
+          <button id="prevPageBtn" class="icon-btn" aria-label="Previous page" type="button">←</button>
+          <button id="nextPageBtn" class="next-btn" type="button">
+            Next Page
+            <span aria-hidden="true">→</span>
+          </button>
+        </nav>
+      </section>
+
+      <section id="resultPage" class="is-hidden">
+        <section class="result-header-card">
+          <h2>Result</h2>
+        </section>
+
+        <section class="result-grid">
+          <article class="result-card archetype-card">
+            <h3>Your Archetype</h3>
+            <p class="archetype-title" id="archetypeTitle">Analyzing...</p>
+            <p class="archetype-sub" id="archetypeSub">Loading...</p>
+          </article>
+
+          <article class="result-card trait-card">
+            <h3>Trait Breakdown</h3>
+            <p class="trait-subtitle">See which side pulls you more</p>
+            <div class="trait-chart" id="traitChart"></div>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script src="./quiz.js"></script>
+  </body>
+</html>
