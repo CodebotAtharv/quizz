@@ -3,62 +3,234 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personality Assessment</title>
+    <title>Personality Test</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./quiz.css" />
   </head>
   <body>
+    <img class="decor decor-top-center" src="https://www.figma.com/api/mcp/asset/4ffe3456-68c3-4ba2-9fd2-e4e71f549d3e" alt="" />
+    <img class="decor decor-top-left" src="https://www.figma.com/api/mcp/asset/1931b6c8-27f4-49ce-ae8d-7c6eb2e98f33" alt="" />
+    <img class="decor decor-top-right" src="https://www.figma.com/api/mcp/asset/e08dc5bc-9f6b-4701-b3bc-f4c8f3409b50" alt="" />
+
     <header class="topbar">
-      <p class="logo">Logo.</p>
-      <button class="login-btn" type="button">Log In</button>
+      <button class="logo logo-btn js-home-trigger" type="button">Logo.</button>
+      <button class="login-btn" id="navLoginBtn" type="button">Log In</button>
     </header>
 
-    <main class="page-wrap">
-      <section id="quizPage">
-        <section class="assessment-card">
+    <main class="landing-page">
+      <section class="hero">
+        <h1 class="hero-title">
+          <span class="highlight">Intro</span>vert, Extro<span class="highlight">vert, Ambi</span>vert, Omn<span class="highlight">ivert,</span><br />
+          Co<span class="highlight">nfusing right? Know</span> what you a<span class="highlight">re</span>
+        </h1>
+        <button class="cta-btn js-scroll-test" type="button">Take the test</button>
+      </section>
+
+      <section class="showcase">
+        <div class="showcase-art art-left"></div>
+        <div class="showcase-art art-right"></div>
+        <img
+          class="showcase-screen"
+          src="https://www.figma.com/api/mcp/asset/3a0f90ac-07b4-4477-a148-9b308b117b75"
+          alt="Personality report preview"
+        />
+        <p class="showcase-copy">Get a detailed analysis of you by answering a few questions !</p>
+      </section>
+
+      <section class="statement">
+        <p>Unlock insights into your personality with this quick, scientifically-backed Big Five test.</p>
+      </section>
+
+      <section class="trait-section">
+        <div class="trait-grid">
+          <article class="trait-tile" style="--tile-image: url('https://www.figma.com/api/mcp/asset/9317ee40-2787-4264-b34e-ae77a75db8a0');">
+            <p>Open-mindedness</p>
+          </article>
+          <article class="trait-tile" style="--tile-image: url('https://www.figma.com/api/mcp/asset/aa85d3ef-8a31-4499-9822-1e632df22772');">
+            <p>Conscientiousness</p>
+          </article>
+          <article class="trait-tile" style="--tile-image: url('https://www.figma.com/api/mcp/asset/0ba07395-1fa6-4685-8d39-083034f112e9');">
+            <p>Extraversion</p>
+          </article>
+          <article class="trait-tile" style="--tile-image: url('https://www.figma.com/api/mcp/asset/fb3ea26e-f73e-4d54-a957-a4daf15b7c54');">
+            <p>Agreeableness</p>
+          </article>
+          <article class="trait-tile" style="--tile-image: url('https://www.figma.com/api/mcp/asset/2388cbda-6508-4d3e-9fb6-b3b9d07ea76f');">
+            <p>Negative Emotionality</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="quiz-preview" id="test-preview">
+        <h2>How do you do it ? Click, Click and it's done !</h2>
+        <div class="preview-card-list" id="previewQuestions"></div>
+        <article class="preview-result">
+          <div class="sparkle-mark" aria-hidden="true">✦</div>
           <div>
-            <h1>Personality Assesment</h1>
+            <p>Congrats!!</p>
+            <p>You are a Good person</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="reasons">
+        <h2>Why you should do this?</h2>
+        <div class="reason-grid">
+          <article class="reason-card wide" style="--reason-image: url('https://www.figma.com/api/mcp/asset/74db055c-d0be-4c7f-9bd2-ff688f3f8213');">
+            <p>Understand Yourself</p>
+          </article>
+          <article class="reason-card tall" style="--reason-image: url('https://www.figma.com/api/mcp/asset/dd8b75be-027a-4aca-9989-0001ed2a7a6f');">
+            <p>Improve your team performance</p>
+          </article>
+          <article class="reason-card tall" style="--reason-image: url('https://www.figma.com/api/mcp/asset/8d2d30f1-91b2-4946-8842-ca1ef8f22174');">
+            <p>Unlock your potential</p>
+          </article>
+          <article class="reason-card big" style="--reason-image: url('https://www.figma.com/api/mcp/asset/53219588-c928-4f8c-8e0c-59f911755e79');">
+            <p>Understand others</p>
+          </article>
+          <article class="reason-card wide" style="--reason-image: url('https://www.figma.com/api/mcp/asset/fb8bac53-6cef-4320-805e-9b0b8ca093c0');">
+            <p>Grow your career</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <img class="bottom-figure figure-left" src="https://www.figma.com/api/mcp/asset/0f3e8142-5770-4b73-89d8-1357e754219b" alt="" />
+        <img class="bottom-figure figure-left-mid" src="https://www.figma.com/api/mcp/asset/6e6ba2d9-85b3-4e47-aa8f-1de3dd3981aa" alt="" />
+        <img class="bottom-figure figure-right-mid" src="https://www.figma.com/api/mcp/asset/6a646116-6257-4027-8f80-59074785ab9f" alt="" />
+        <img class="bottom-figure figure-right" src="https://www.figma.com/api/mcp/asset/50f92d83-d751-4375-a0d6-0b79e0534890" alt="" />
+        <h2>I hope this is enough to convince you to take the test! Try it, it won't hurt :)</h2>
+        <button class="cta-btn js-scroll-test" type="button">Take the test</button>
+      </section>
+    </main>
+
+    <section class="app-view is-hidden" id="assessmentPage">
+      <main class="app-shell">
+        <section class="assessment-header-card">
+          <div>
+            <h2>Personality Assesment</h2>
             <p>Page 1 of 1</p>
           </div>
-          <div class="badge" aria-hidden="true">10</div>
+          <img
+            class="assessment-badge-image"
+            src="https://www.figma.com/api/mcp/asset/3fdd5beb-fb61-4bbd-8416-cd6e56d7b453"
+            alt=""
+          />
         </section>
 
-        <section id="questionsContainer" aria-label="Assessment questions"></section>
+        <section class="assessment-list" id="assessmentQuestions"></section>
 
-        <nav class="pager">
-          <button id="prevPageBtn" class="icon-btn" aria-label="Previous page" type="button">←</button>
-          <button id="nextPageBtn" class="next-btn" type="button">
+        <nav class="assessment-nav">
+          <button class="ghost-nav-btn" id="assessmentBackBtn" type="button" aria-label="Back">←</button>
+          <button class="solid-nav-btn" id="assessmentNextBtn" type="button">
             Next Page
             <span aria-hidden="true">→</span>
           </button>
         </nav>
-      </section>
+      </main>
+    </section>
 
-      <section id="resultPage" class="is-hidden">
-        <section class="result-header-card">
+    <section class="app-view is-hidden" id="resultPage">
+      <main class="result-shell">
+        <section class="result-title-card">
           <h2>Result</h2>
         </section>
 
-        <section class="result-grid">
-          <article class="result-card archetype-card">
+        <section class="result-panel-grid">
+          <article class="result-panel">
             <h3>Your Archetype</h3>
-            <p class="archetype-title" id="archetypeTitle">Analyzing...</p>
-            <p class="archetype-sub" id="archetypeSub">Loading...</p>
+            <p class="result-archetype" id="resultArchetype">Analyzing...</p>
+            <p class="result-subcopy" id="resultSubcopy">Loading...</p>
           </article>
 
-          <article class="result-card trait-card">
+          <article class="result-panel">
             <h3>Trait Breakdown</h3>
-            <p class="trait-subtitle">See which side pulls you more</p>
-            <div class="trait-chart" id="traitChart"></div>
+            <p class="result-panel-copy">See which side pulls you more</p>
+            <div class="result-chart" id="resultChart"></div>
           </article>
         </section>
-      </section>
-    </main>
+      </main>
+    </section>
+
+    <section class="app-view auth-view is-hidden" id="loginPage">
+      <main class="auth-shell">
+        <section class="auth-card">
+          <div class="auth-copy">
+            <p class="auth-eyebrow">Welcome Back</p>
+            <h2>Log in to continue your personality journey.</h2>
+            <p>We can wire real accounts later on Vercel-backed auth. For now this is the designed entry screen and flow.</p>
+          </div>
+
+          <form class="auth-form">
+            <label class="auth-field">
+              <span>Email</span>
+              <input type="email" placeholder="you@example.com" />
+            </label>
+            <label class="auth-field">
+              <span>Password</span>
+              <input type="password" placeholder="Enter your password" />
+            </label>
+            <button class="auth-submit" type="button">Log In</button>
+            <p class="auth-switch">
+              New here?
+              <button class="auth-link-btn" id="toSignupBtn" type="button">Create an account</button>
+            </p>
+          </form>
+        </section>
+      </main>
+    </section>
+
+    <section class="app-view auth-view is-hidden" id="signupPage">
+      <main class="auth-shell">
+        <section class="auth-card">
+          <div class="auth-copy">
+            <p class="auth-eyebrow">Create Account</p>
+            <h2>Sign up and keep your results in one place.</h2>
+            <p>The real account system can plug into Vercel later. This screen sets up the structure and navigation now.</p>
+          </div>
+
+          <form class="auth-form">
+            <label class="auth-field">
+              <span>Full Name</span>
+              <input type="text" placeholder="Your name" />
+            </label>
+            <label class="auth-field">
+              <span>Email</span>
+              <input type="email" placeholder="you@example.com" />
+            </label>
+            <label class="auth-field">
+              <span>Password</span>
+              <input type="password" placeholder="Choose a password" />
+            </label>
+            <button class="auth-submit" type="button">Sign Up</button>
+            <p class="auth-switch">
+              Already have an account?
+              <button class="auth-link-btn" id="toLoginBtn" type="button">Log in</button>
+            </p>
+          </form>
+        </section>
+      </main>
+    </section>
+
+    <footer class="footer">
+      <p>Footer</p>
+    </footer>
+
+    <div class="confirm-overlay is-hidden" id="confirmOverlay" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+      <div class="confirm-card">
+        <h2 id="confirmTitle">Leave this page?</h2>
+        <p>Your current test flow will be interrupted. You can come back, but any unsaved context on this screen may be lost.</p>
+        <div class="confirm-actions">
+          <button class="ghost-nav-btn" id="confirmStayBtn" type="button">Stay</button>
+          <button class="solid-nav-btn" id="confirmLeaveBtn" type="button">Leave</button>
+        </div>
+      </div>
+    </div>
 
     <script src="./quiz.js"></script>
   </body>
