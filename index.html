@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -22,30 +23,33 @@
     <link rel="stylesheet" href="./quiz.css" />
   </head>
   <body>
-    <img class="decor decor-top-center" src="https://www.figma.com/api/mcp/asset/4ffe3456-68c3-4ba2-9fd2-e4e71f549d3e" alt="" />
-    <img class="decor decor-top-left" src="https://www.figma.com/api/mcp/asset/1931b6c8-27f4-49ce-ae8d-7c6eb2e98f33" alt="" />
-    <img class="decor decor-top-right" src="https://www.figma.com/api/mcp/asset/e08dc5bc-9f6b-4701-b3bc-f4c8f3409b50" alt="" />
+    <main class="landing-page">
+    <img class="decor decor-top-center" src="assets/image.svg" alt="" />
+    <img class="decor decor-top-left" src="assets/image-1.svg" alt="" />
+    <img class="decor decor-top-right" src="assets/image-2.svg" alt="" />
 
     <header class="topbar">
-      <button class="logo logo-btn js-home-trigger" type="button">Logo.</button>
+      <button class="logo logo-btn js-home-trigger" type="button">Psyren</button>
       <button class="login-btn" id="navLoginBtn" type="button">Log In</button>
     </header>
 
-    <main class="landing-page">
-      <section class="hero">
-        <h1 class="hero-title">
-          <span class="highlight">Intro</span>vert, Extro<span class="highlight">vert, Ambi</span>vert, Omn<span class="highlight">ivert,</span><br />
-          Co<span class="highlight">nfusing right? Know</span> what you a<span class="highlight">re</span>
-        </h1>
-        <button class="cta-btn js-scroll-test" type="button">Take the test</button>
-      </section>
+    <section class="hero">
+      <h1 class="hero-title">
+      <span class="highlight">U</span>nderstand y<span class="highlight">our traits. </span> 
+      See your patterns.
+      Meet yourself.
+      </h1>
+      <button class="cta-btn js-scroll-test" type="button">
+      Take the test
+      </button>
+    </section>
 
       <section class="showcase">
         <div class="showcase-art art-left"></div>
         <div class="showcase-art art-right"></div>
         <img
           class="showcase-screen"
-          src="https://www.figma.com/api/mcp/asset/3a0f90ac-07b4-4477-a148-9b308b117b75"
+          src="assets/image 7.svg"
           alt="Personality report preview"
         />
         <p class="showcase-copy">Get a detailed analysis of you by answering a few questions !</p>
@@ -57,20 +61,25 @@
 
       <section class="trait-section">
         <div class="trait-grid">
-          <article class="trait-tile" style="--tile-image: url('https://www.figma.com/api/mcp/asset/9317ee40-2787-4264-b34e-ae77a75db8a0');">
-            <p>Open-mindedness</p>
+          <article class="trait-tile">
+            <img class="trait-tile-image" src="assets/image i1.svg" alt="" loading="lazy" />
+            
           </article>
-          <article class="trait-tile" style="--tile-image: url('https://www.figma.com/api/mcp/asset/aa85d3ef-8a31-4499-9822-1e632df22772');">
-            <p>Conscientiousness</p>
+          <article class="trait-tile">
+            <img class="trait-tile-image" src="assets/image i2.svg" alt="" loading="lazy" />
+            
           </article>
-          <article class="trait-tile" style="--tile-image: url('https://www.figma.com/api/mcp/asset/0ba07395-1fa6-4685-8d39-083034f112e9');">
-            <p>Extraversion</p>
+          <article class="trait-tile">
+            <img class="trait-tile-image" src="assets/image i3.svg" alt="" loading="lazy" />
+            
           </article>
-          <article class="trait-tile" style="--tile-image: url('https://www.figma.com/api/mcp/asset/fb3ea26e-f73e-4d54-a957-a4daf15b7c54');">
-            <p>Agreeableness</p>
+          <article class="trait-tile">
+            <img class="trait-tile-image" src="assets/image i4.svg" alt="" loading="lazy" />
+            
           </article>
-          <article class="trait-tile" style="--tile-image: url('https://www.figma.com/api/mcp/asset/2388cbda-6508-4d3e-9fb6-b3b9d07ea76f');">
-            <p>Negative Emotionality</p>
+          <article class="trait-tile">
+            <img class="trait-tile-image" src="assets/image i5.svg" alt="" loading="lazy" />
+            
           </article>
         </div>
       </section>
@@ -90,29 +99,29 @@
       <section class="reasons">
         <h2>Why you should do this?</h2>
         <div class="reason-grid">
-          <article class="reason-card wide" style="--reason-image: url('https://www.figma.com/api/mcp/asset/74db055c-d0be-4c7f-9bd2-ff688f3f8213');">
-            <p>Understand Yourself</p>
+          <article class="reason-card wide">
+            <img class="reason-card-image" src="assets/image w1.svg" alt="" loading="lazy" />
           </article>
-          <article class="reason-card tall" style="--reason-image: url('https://www.figma.com/api/mcp/asset/dd8b75be-027a-4aca-9989-0001ed2a7a6f');">
-            <p>Improve your team performance</p>
+          <article class="reason-card tall">
+            <img class="reason-card-image" src="assets/image w2.svg" alt="" loading="lazy" />
           </article>
-          <article class="reason-card tall" style="--reason-image: url('https://www.figma.com/api/mcp/asset/8d2d30f1-91b2-4946-8842-ca1ef8f22174');">
-            <p>Unlock your potential</p>
+          <article class="reason-card tall">
+            <img class="reason-card-image" src="assets/image w3.svg" alt="" loading="lazy" />
           </article>
-          <article class="reason-card big" style="--reason-image: url('https://www.figma.com/api/mcp/asset/53219588-c928-4f8c-8e0c-59f911755e79');">
-            <p>Understand others</p>
+          <article class="reason-card big">
+            <img class="reason-card-image" src="assets/image w4.svg" alt="" loading="lazy" />
           </article>
-          <article class="reason-card wide" style="--reason-image: url('https://www.figma.com/api/mcp/asset/fb8bac53-6cef-4320-805e-9b0b8ca093c0');">
-            <p>Grow your career</p>
+          <article class="reason-card wide">
+            <img class="reason-card-image" src="assets/image w5.svg" alt="" loading="lazy" />
           </article>
         </div>
       </section>
 
       <section class="final-cta">
-        <img class="bottom-figure figure-left" src="https://www.figma.com/api/mcp/asset/0f3e8142-5770-4b73-89d8-1357e754219b" alt="" />
-        <img class="bottom-figure figure-left-mid" src="https://www.figma.com/api/mcp/asset/6e6ba2d9-85b3-4e47-aa8f-1de3dd3981aa" alt="" />
-        <img class="bottom-figure figure-right-mid" src="https://www.figma.com/api/mcp/asset/6a646116-6257-4027-8f80-59074785ab9f" alt="" />
-        <img class="bottom-figure figure-right" src="https://www.figma.com/api/mcp/asset/50f92d83-d751-4375-a0d6-0b79e0534890" alt="" />
+        <img class="bottom-figure figure-left" src="assets/image 3.svg" alt="" />
+        <img class="bottom-figure figure-left-mid" src="assets/image 4.svg" alt="" />
+        <img class="bottom-figure figure-right-mid" src="assets/image 5.svg" alt="" />
+        <img class="bottom-figure figure-right" src="assets/image 6.svg" alt="" />
         <h2>I hope this is enough to convince you to take the test! Try it, it won't hurt :)</h2>
         <button class="cta-btn js-scroll-test" type="button">Take the test</button>
       </section>
@@ -127,7 +136,7 @@
           </div>
           <img
             class="assessment-badge-image"
-            src="https://www.figma.com/api/mcp/asset/3fdd5beb-fb61-4bbd-8416-cd6e56d7b453"
+            
             alt=""
           />
         </section>
@@ -135,17 +144,13 @@
         <section class="assessment-list" id="assessmentQuestions"></section>
 
         <nav class="assessment-nav">
-          <button class="ghost-nav-btn" id="assessmentBackBtn" type="button" aria-label="Back">←</button>
-          <button class="solid-nav-btn" id="assessmentNextBtn" type="button">
-            Next Page
-            <span aria-hidden="true">→</span>
-          </button>
-        </nav>
+        <button class="quiz-back-btn">← Back</button>        </nav>
       </main>
     </section>
 
     <section class="app-view is-hidden" id="resultPage">
       <main class="result-shell">
+
         <section class="result-title-card">
           <h2>Result</h2>
         </section>
@@ -161,8 +166,15 @@
             <h3>Trait Breakdown</h3>
             <p class="result-panel-copy">See which side pulls you more</p>
             <div class="result-chart" id="resultChart"></div>
+            <canvas id="radarChart" width="300" height="300"></canvas>
           </article>
         </section>
+
+        <div class="result-actions">
+          <button id="retryBtn">Retry</button>
+          <button id="homeBtn">Home</button>
+          </div>
+
       </main>
     </section>
 
@@ -226,9 +238,24 @@
       </main>
     </section>
 
-    <footer class="footer">
-      <p>Footer</p>
-    </footer>
+  <footer class="footer">
+  <div class="footer-inner">
+
+    <div class="footer-left">
+      <p class="footer-brand">Psyren</p>
+      <p class="footer-tagline">      </p>
+    </div>
+
+    <button class="footer-cta js-scroll-test">
+      Take the test
+    </button>
+
+  </div>
+
+  <p class="footer-note">
+    Built for self-awareness · © 2026 Psyren
+  </p>
+</footer>
 
     <div class="confirm-overlay is-hidden" id="confirmOverlay" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
       <div class="confirm-card">
@@ -240,7 +267,8 @@
         </div>
       </div>
     </div>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./quiz.js"></script>
   </body>
 </html>
