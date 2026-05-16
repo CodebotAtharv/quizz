@@ -555,6 +555,7 @@ if (traitInsight) {
 }
   renderResultChart(scores);
   renderRadarChart(scores);
+  renderPolarChart(scores);
 
   // ✅ OPTIONAL SAVE (only if logged in)
   const { data } = await supabaseClient.auth.getSession();
@@ -575,6 +576,10 @@ if (traitInsight) {
 
   assessmentPage.classList.add("is-hidden");
   resultPage.classList.remove("is-hidden");
+  setTimeout(() => {
+  renderRadarChart(scores);
+  renderPolarChart(scores);
+}, 100);
   loginPage.classList.add("is-hidden");
   signupPage.classList.add("is-hidden");
 
@@ -746,6 +751,64 @@ function renderRadarChart(scores) {
           ticks: {
             display: false
           }
+        }
+      }
+    }
+  });
+}
+
+/* ============================= */
+/* POLAR CHART */
+/* ============================= */
+
+function renderPolarChart(scores) {
+  const canvas = document.getElementById("polarChart");
+  if (!canvas) return;
+
+  const ctx = canvas.getContext("2d");
+
+  if (window.polarInstance) {
+    window.polarInstance.destroy();
+  }
+
+  const labels = scores.map(s => s.label);
+  const data = scores.map(s => s.score);
+
+  window.polarInstance = new Chart(ctx, {
+    type: "polarArea",
+    data: {
+      labels: labels,
+      datasets: [{
+        data: data,
+        backgroundColor: [
+          "rgba(0,0,0,0.08)",
+          "rgba(0,0,0,0.15)",
+          "rgba(0,0,0,0.22)",
+          "rgba(0,0,0,0.3)",
+          "rgba(0,0,0,0.4)"
+        ],
+        borderColor: "#000",
+        borderWidth: 1
+      }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          position: "bottom",
+          labels: {
+            color: "#000",
+            font: {
+              size: 10,
+              family: "Playfair Display"
+            }
+          }
+        }
+      },
+      scales: {
+        r: {
+          ticks: { display: false },
+          grid: { color: "rgba(0,0,0,0.1)" },
+          angleLines: { color: "rgba(0,0,0,0.1)" }
         }
       }
     }

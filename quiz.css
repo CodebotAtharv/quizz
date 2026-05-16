@@ -1347,3 +1347,58 @@ button {
   font-size: 0.05rem;
   opacity: 0.5;
 }
+
+/* ============================= */
+/* GOOGLE LOGIN BUTTON */
+/* ============================= */
+
+.auth-google-btn {
+  height: 52px;
+  border: 1px solid #111;
+  border-radius: 12px;
+  background: #fff;
+  color: #000;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.google-icon {
+  font-weight: 700;
+}
+
+
+/* ============================= */
+/* RADAR + POLAR CHART FIX */
+/* ============================= */
+
+#radarChart,
+#polarChart {
+  max-width: 260px;
+  margin: 30px auto 10px;
+  display: block;
+}
+
+
+/* ============================= */
+/* POLAR CHART SPECIFIC */
+/* ============================= */
+
+#polarChart {
+  margin-top: 20px;
+}
+
+
+/* ============================= */
+/* RESULT PANEL BALANCE */
+/* ============================= */
+
+.result-panel canvas {
+  margin-top: 20px;
+}

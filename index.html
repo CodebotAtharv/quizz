@@ -156,20 +156,37 @@
         </section>
 
         <section class="result-panel-grid">
-          <article class="result-panel">
-            <h3>Your Archetype</h3>
-            <p class="result-archetype" id="resultArchetype">Analyzing...</p>
-            <p class="result-subcopy" id="resultSubcopy">Loading...</p>
-          </article>
 
-          <article class="result-panel">
-            <h3>Trait Breakdown</h3>
-            <p class="result-panel-copy">See which side pulls you more</p>
-            <div class="result-chart" id="resultChart"></div>
-            <canvas id="radarChart" width="300" height="300"></canvas>
-          </article>
-        </section>
+  <!-- Archetype -->
+  <article class="result-panel">
+    <h3>Your Archetype</h3>
+    <p class="result-archetype" id="resultArchetype">Analyzing...</p>
+    <p class="result-subcopy" id="resultSubcopy">Loading...</p>
 
+    <!-- ✅ ADDED -->
+    <p id="traitInsight" class="result-panel-copy"></p>
+  </article>
+
+  <!-- Bar -->
+  <article class="result-panel">
+    <h3>Trait Breakdown</h3>
+    <p class="result-panel-copy">See which side pulls you more</p>
+    <div class="result-chart" id="resultChart"></div>
+  </article>
+
+  <!-- ✅ NEW -->
+  <article class="result-panel">
+    <h3>Radar View</h3>
+    <canvas id="radarChart"></canvas>
+  </article>
+
+  <!-- ✅ NEW -->
+  <article class="result-panel">
+    <h3>Polar View</h3>
+    <canvas id="polarChart"></canvas>
+  </article>
+
+</section>
         <div class="result-actions">
           <button id="retryBtn">Retry</button>
           <button id="homeBtn">Home</button>
@@ -197,6 +214,10 @@
               <input type="password" placeholder="Enter your password" />
             </label>
             <button class="auth-submit" type="button">Log In</button>
+            <button id="googleLogin" class="auth-google-btn" type="button">
+  <span class="google-icon">G</span>
+  Continue with Google
+</button>
             <p class="auth-switch">
               New here?
               <button class="auth-link-btn" id="toSignupBtn" type="button">Create an account</button>
